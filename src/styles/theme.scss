@@ -1,0 +1,31 @@
+// 主题定制
+// 主色 #ee8031
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      base: #ee8031,
+    ),
+  )
+);
+
+$color: #ee8031;
+$secondary: #666666;
+$nav-buttom-height: 80px;
+
+.flex-s-b {
+  .el-form-item__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.row-r {
+  .el-form-item__content {
+    flex-direction: row-reverse;
+  }
+}
+.max-but {
+  width: 100%;
+}
+.big-but {
+  height: 35px;
+}
