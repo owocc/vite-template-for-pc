@@ -4,19 +4,19 @@
             <div class="page-title">
                 <img src="@/assets/images/dzuo.png" />
                 <span>{{ $route.query.type == 1 ? '注册' : '登录' }}</span>
-                <img src="@/assets/images/dyou.png"/>
+                <img src="@/assets/images/dyou.png" />
             </div>
             <component :is="currentForm"></component>
         </div>
-        <!-- registration- -->
     </div>
 </template>
 <script setup>
 import router from '@/router';
-import { computed, } from 'vue';
+import { computed } from 'vue';
 import LoginForm from './LoginForm.vue'
 import RegistrationForm from './RegistrationForm.vue'
 
+//动态组件,切换表单
 const currentForm = computed(() => {
     if (router.currentRoute.value.query.type == 1) {
         return markRaw(RegistrationForm)

@@ -1,5 +1,5 @@
 <template>
-    <NavigationVue/>
+    <NavigationVue />
     <RouterView to="/"></RouterView>
 </template>
 <script setup>

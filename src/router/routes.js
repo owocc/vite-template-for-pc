@@ -10,8 +10,8 @@ export default [
     path: "/login",
     name: "login",
     component: () => import("@/views/Login/index.vue"),
-    meta:{
-      isNav:true
-    }
+    meta: {
+      isNav: true,
+    },
   },
 ];
