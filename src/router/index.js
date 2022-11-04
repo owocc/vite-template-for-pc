@@ -1,10 +1,17 @@
-import {createRouter,createWebHistory} from "vue-router"
-import routes from './routes'
-
+import { createRouter, createWebHashHistory } from "vue-router";
+import routes from "./routes";
 const router = createRouter({
-    history:createWebHistory(),
-    routes
+  history: createWebHashHistory(),
+  routes,
+});
 
-})
+// 无权限路由:
+const publicRoutes = ["/", "/login"];
 
-export default router
+router.beforeEach((to, from, next) => {
+  if (publicRoutes.some((e) => e == to.path)) {
+    next();
+  }
+});
+
+export default router;
